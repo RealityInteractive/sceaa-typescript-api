@@ -1,0 +1,11 @@
+{
+  "name": "sceaa-typescript-api",
+  "version": "2.3.7",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reality Interactive",
+  "license": "ISC"
+}
