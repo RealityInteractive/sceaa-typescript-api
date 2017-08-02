@@ -2,7 +2,7 @@ declare class DeviceParameterStore {
     static setAssetTag(value: string): void;
     static getAssetTag(): string;
 
-    static setStartupActivity(activityClass: String, appPackage: String): void;
+    static setStartupActivity(activityClass: string, appPackage: string): void;
 
     static setString(key: string, value: string): void;
     static getString(key: string): string;

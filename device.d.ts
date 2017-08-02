@@ -1,11 +1,11 @@
 declare class Device {
-    static getDeviceRootRelativePath(path: String, root: DeviceRoot);
+    static getDeviceRootRelativePath(path: string, root: DeviceRoot);
 
     static getDeviceRootPath(root: DeviceRoot);
 
-    static installApk(path: String): void;
+    static installApk(path: string): void;
 
-    static uninstallApk(appPackage: String, keepData: boolean): void;
+    static uninstallApk(appPackage: string, keepData: boolean): void;
 
     static runShellCommand(command: string, allowRoot: boolean): { output: string, error: string };
 }
