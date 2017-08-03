@@ -8,6 +8,8 @@ declare class Device {
     static uninstallApk(appPackage: string, keepData: boolean): void;
 
     static runShellCommand(command: string, allowRoot: boolean): { output: string, error: string };
+
+    static getDeviceConfiguration(): any;
 }
 
 declare type DeviceRoot = "SD_CARD" | "BITSHUTTLE_DIRECTORY"
