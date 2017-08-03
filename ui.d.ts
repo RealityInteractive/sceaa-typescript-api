@@ -107,7 +107,7 @@ declare interface UpdateStep {
     details?: string;
     message?: string;
     isSafeToRemoveUsbDevice?: boolean;
-    state?: string;
+    state?: UpdateStepState;
     noDelay?: boolean;
 }
 /**The values returned from a StringDialog */
@@ -119,7 +119,12 @@ declare interface ValidationFunction<T> {
     /** The value being validated. If the value is invalid, return an error message, otherwise don't return a value */
     (value: T): string | void;
 }
-
+declare type UpdateStepState =
+    "SPLASH_SCREEN" |
+    "LOADING" |
+    "DONE" |
+    "BUSY" |
+    "ERROR";
 /** Represents buttons shown on the UI Dialogs*/
 declare type ProgressMessageIcon =
     "INVALID" |
