@@ -14,9 +14,8 @@ declare class UI {
     /**Blocks execution until the update UI has focus (In most cases once the Introduction Screen is complete) */
     static waitForFocus(): void;
 
-    static showProgressMessage(key: string, message: ProgressMessage): void;
-    static clearAllProgressMessages(): void;
-    static clearProgressMessage(key: string);
+    static showUpdateStep(updateStep: UpdateStep): void;
+
     static setNumReservedProgressMessages(numberOfMessages: number): void;
 }
 
@@ -102,6 +101,14 @@ declare interface ProgressMessage {
     details?: string;
     icon?: ProgressMessageIcon;
     progress?: number;
+}
+declare interface UpdateStep {
+    title?: string;
+    details?: string;
+    message?: string;
+    isSafeToRemoveUsbDevice?: boolean;
+    state?: string;
+    noDelay?: boolean;
 }
 /**The values returned from a StringDialog */
 declare class StringInputDialogResult extends DialogResult {
